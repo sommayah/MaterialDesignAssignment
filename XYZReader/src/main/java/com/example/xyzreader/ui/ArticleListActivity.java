@@ -8,6 +8,8 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -44,6 +46,8 @@ public class ArticleListActivity extends AppCompatActivity implements
         mToolbar = (Toolbar) findViewById(R.id.app_bar);
 
 
+
+
         final View toolbarContainerView = findViewById(R.id.collapsing_toolbar_layout);
 
        // mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
@@ -55,8 +59,15 @@ public class ArticleListActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 refresh();
+                CoordinatorLayout rootLayout = (CoordinatorLayout) findViewById(R.id.coordinator);
+                Snackbar
+                        .make(rootLayout, R.string.snackbar_text, Snackbar.LENGTH_LONG)
+                        .show(); // Don’t forget to show!
+
             }
         });
+
+
 
         if (savedInstanceState == null) {
             refresh();
