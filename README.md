@@ -1,6 +1,7 @@
 # MaterialDesignAssignment
 ## Description 
-This is Assignment 5 in the Udacity Android nanodegree. The purpose of this assignment is to transfer applications' layout to the new material design guidlines and be more user friendly.
+* This is Assignment 5 in the Udacity Android nanodegree. The purpose of this assignment is to transfer applications' layout to the new material design guidlines and be more user friendly.
+* XYZ Reader: A mock RSS feed reader featuring banner photos and shocking headlines!
 
 ## Features
 * App uses the Design Support library and its provided widget types (FloatingActionButton, AppBarLayout, SnackBar, etc).
